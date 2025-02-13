@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+
+<h2 class="text-center">Đăng ký</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" id="Email" name="Email" class="form-control" required>
+        <span class="text-danger">@Html.ValidationMessage("Email")</span>
+    </div>
+    
+    <div class="mb-3">
+        <label for="Password" class="form-label">Mật khẩu</label>
+        <input type="password" id="Password" name="Password" class="form-control" required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" required>
+        <span class="text-danger">@Html.ValidationMessage("ConfirmPassword")</span>
+    </div>
+    
+    <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+</form>
+
+<p class="text-center mt-3">
+    Đã có tài khoản? <a asp-controller="Account" asp-action="Login">Đăng nhập</a>
+</p>

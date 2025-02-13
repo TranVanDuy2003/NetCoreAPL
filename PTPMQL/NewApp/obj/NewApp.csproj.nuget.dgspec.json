@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NetCoreAPL\\NewApp\\NewApp.csproj": {}
+    "E:\\NetCoreAPL\\PTPMQL\\NewApp\\NewApp.csproj": {}
   },
   "projects": {
-    "E:\\NetCoreAPL\\NewApp\\NewApp.csproj": {
+    "E:\\NetCoreAPL\\PTPMQL\\NewApp\\NewApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NetCoreAPL\\NewApp\\NewApp.csproj",
+        "projectUniqueName": "E:\\NetCoreAPL\\PTPMQL\\NewApp\\NewApp.csproj",
         "projectName": "NewApp",
-        "projectPath": "E:\\NetCoreAPL\\NewApp\\NewApp.csproj",
+        "projectPath": "E:\\NetCoreAPL\\PTPMQL\\NewApp\\NewApp.csproj",
         "packagesPath": "C:\\Users\\Tran Van Duy\\.nuget\\packages\\",
-        "outputPath": "E:\\NetCoreAPL\\NewApp\\obj\\",
+        "outputPath": "E:\\NetCoreAPL\\PTPMQL\\NewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tran Van Duy\\AppData\\Roaming\\NuGet\\NuGet.Config"

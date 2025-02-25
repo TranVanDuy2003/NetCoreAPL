@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center mt-5">
+    <h2>Chào mừng bạn đến với BAITAP2102</h2>
+    <p>Chọn một chức năng bên dưới để thực hiện:</p>
+
+    <div class="mt-4">
+        <a asp-controller="BMI" asp-action="Index" class="btn btn-primary btn-lg m-2">Tính Chỉ Số BMI</a>
+        <a asp-controller="Grade" asp-action="Index" class="btn btn-success btn-lg m-2">Tính Điểm Môn Học</a>
+        <a asp-controller="Invoice" asp-action="Index" class="btn btn-warning btn-lg m-2">Tính Tiền Hóa Đơn</a>
+    </div>
+</div>

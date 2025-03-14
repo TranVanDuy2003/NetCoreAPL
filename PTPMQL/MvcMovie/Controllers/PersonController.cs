@@ -16,7 +16,7 @@ namespace MvcMovie.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Persons.ToListAsync());
+            return View(await _context.Person.ToListAsync());
         }
 
         public IActionResult Create()
@@ -26,7 +26,7 @@ namespace MvcMovie.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonId, FullName, Address, Gmail")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -37,14 +37,14 @@ namespace MvcMovie.Controllers
             return View(person);
         }
 
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Persons.FindAsync(id);
+            var person = await _context.Person.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace MvcMovie.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PersonId,FullName,Address")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId, FullName, Address, Gmail")] Person person)
         {
             if (id != person.PersonId)
             {
@@ -84,14 +84,14 @@ namespace MvcMovie.Controllers
             return View(person);
         }
 
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Persons.FindAsync(id);
+            var person = await _context.Person.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
@@ -102,17 +102,17 @@ namespace MvcMovie.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var person = await _context.Persons.FindAsync(id);
-            _context.Persons.Remove(person);
+            var person = await _context.Person.FindAsync(id);
+            _context.Person.Remove(person);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(int id)
+        private bool PersonExists(string id)
         {
-            return _context.Persons.Any(e => e.PersonId == id);
+            return _context.Person.Any(e => e.PersonId == id);
         }
     }
 }

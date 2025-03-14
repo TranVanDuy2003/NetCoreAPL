@@ -7,10 +7,9 @@ namespace MvcMovie.Models
     public class Person
     {
         [Key]
-        public int PersonId { get; set; }
-
+        public string PersonId { get; set; }
         public string FullName { get; set; }
-
         public string Address { get; set; }
+        public string Gmail { get; set; } // Thêm thuộc tính Gmail
     }
 }

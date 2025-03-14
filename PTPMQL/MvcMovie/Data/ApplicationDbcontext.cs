@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Models; // Thêm using directive này
+using MvcMovie.Models;
 
 namespace MvcMovie.Data
 {
@@ -9,6 +9,9 @@ namespace MvcMovie.Data
         {
         }
 
-        public DbSet<Person> Persons { get; set; } // Sửa tên DbSet thành Persons
+        public DbSet<Person> Person { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<DaiLy> DaiLy { get; set; } // Thêm DbSet cho DaiLy
+        public DbSet<HeThongPhanPhoi> HeThongPhanPhoi { get; set; } // Thêm DbSet cho HeThongPhanPhoi
     }
 }

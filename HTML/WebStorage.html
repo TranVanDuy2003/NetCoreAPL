@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Duy</h1>
+
+<div id="result"></div>
+
+<script>
+const x = document.getElementById("result");
+if (typeof(Storage) !== "undefined") {
+  x.innerHTML = "Your browser supports Web storage!";
+} else {
+  x.innerHTML = "Sorry, no Web storage support!";
+}
+</script>
+
+</body>
+</html>
+

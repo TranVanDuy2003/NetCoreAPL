@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Tran Van Duy 2121050802</h1>
+<p>Tran Van Duy 2121050802</p>
+
+<button onclick="getLocation()">Tran Van Duy 2121050802</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Tran Van Duy 2121050802";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Tran Van Duy 2121050802: " + position.coords.latitude + 
+  "<br>Tran Van Duy 2121050802: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Tran Van Duy 2121050802");
+}
+</script>
+
+</body>
+</html>
